@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <div id="main3">
+        <div id="nav">
+            <div id="wel">
+                <% if (adm && adm.name) { %>
+                    <h1>Welcome <%= adm.name %></h1>
+                <% } else { %>
+                    <h1>Welcome Admin</h1> <!-- Default message or handle as needed -->
+                <% } %>
+            </div>
+            <h2>Admin Panel</h2>
+            <div id="links">
+                <a id="delc" href="/">Logout</a>
+            </div>
+        </div>
+        <div id="hero">
+            <div id="concreate">
+                <form action="createconf" method="post">
+                    <input type="text" name="title" placeholder="Conference Title">
+                    <input type="date" name="date" placeholder="Conference Date">
+                    <input id="greenbg" type="submit" value="Create Conference">
+                </form>
+            </div>
+            <div id="dets">
+                
+                    <a id="viewfeed" href="/viewfeed">View Feedbacks</a>
+               
+            </div>
+        </div>
+        <div id="lower">
+            <div id="contents">
+            <% if (conf.length > 0) { %>
+                <% conf.forEach(c => { %>
+                    <div id="box">
+                        <h1><%= c.title %></h1>
+                        <p>Scheduled on <strong><%= c.date %></strong></p>
+                        <% if (c.attendees && c.attendees.length > 0) { %>
+                            <p>Persons Registered: <%= c.attendees.length %></p>
+                        <% } else { %>
+                            <p>No registrations yet</p>
+                        <% } %>
+                        <% if (c.feedback && c.feedback.length > 0) { %>
+                            <p>Feedback By: <%= c.feedback.length %></p>
+                        <% } else { %>
+                            <p>No feedback received</p>
+                        <% } %>
+                        <br>
+                        <div id="links">
+                            <!-- <a id="viewfeed" href="/view/<%= c.id %>">View Feedbacks</a> -->
+                            <a id="delc" href="/delete/<%= c.id %>">Delete Conference</a>
+                        </div>
+                    </div>
+                <% }) %>
+            <% } else { %>
+                <h3>No Conferences Yet</h3>
+            <% } %>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

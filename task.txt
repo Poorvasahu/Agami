@@ -1,0 +1,34 @@
+Develop an application to manage conferences. Users should be able to register for conferences, view schedules, and submit feedback. Admins should be able to manage conference details and registrations. Save all data to a database.
+
+step 1- create admin(f/b)-----------------
+step 2- admin should have all right to view all users and their feedbacks----------------
+step 3- admin will create conferences---------------------
+step 4- users can create their account----------
+step 5- users will view all conferences------------
+step 6- users can select to register for a conference---------
+step 7- users will give feedback after the comfernece------------
+step 8- admin will view all--------------
+
+
+models-->
+--admin
+    -name
+    -password
+    -createdconferences
+--users
+    -username
+    -full name
+    -password
+    -age
+    -registered for
+--conference
+    -date
+    -attendees
+--feedback
+    -userid
+    -confid
+    -date
+    -content
+
+
+    

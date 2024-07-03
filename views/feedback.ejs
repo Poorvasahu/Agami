@@ -1,0 +1,20 @@
+<!-- Example feedback.ejs template -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Give Feedback</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <div id="main">
+        <h1>Give Feedback for <%= conf.title %></h1>
+        <form action="/feedback/<%= conf.id %>" method="post">
+            <textarea name="content" rows="5" placeholder="Enter your feedback..." required></textarea>
+            <br>
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <div id="main">
+        <div id="content">
+            <h1>Create User</h1>
+        <form action="/createuser" method="post">
+        <input type="text" maxlength="64" required name="username" placeholder="Username">
+        <input type="text" maxlength="75" required name="fullName" placeholder="Full Name">
+        <input type="password" maxlength="64" required name="password" placeholder="Password">
+        <input type="number" required name="age" placeholder="Age">
+        <input type="submit" value="Create User">
+        </form>
+        <p>Already A User?<a  id="a" href="/login">Login Here</a></p>
+        <br>
+        <p><a id="a" href="/adminlogin">Login here</a> If You Are <strong id="green">Admin</strong></p>
+        </div>
+    </div>
+</body>
+</html>

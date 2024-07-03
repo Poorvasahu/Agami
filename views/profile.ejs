@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <div id="main4">
+        <div id="nav">
+            <div id="wel">
+                <h1>Welcome <%=user.fullName%></h1>
+            </div>
+            <h2>User Panel</h2>
+            <div id="links">
+                <a id="delc" href="/">LogOut</a>
+            </div>
+        </div>
+        <div id="dets2">
+                        
+        </div>
+        <div id="lower">
+            <div id="contents">
+            <%if(conf.length>0){%>
+                <%conf.forEach(c=>{%>
+                    <%flag=false%>
+                    <div id="box2">
+                        <h1><%=c.title%></h1>
+                        <p>Scheduled on <%=c.date%></p>
+                        <p style="margin-bottom: 7px;">Persons Registered: <%=c.attendees.length%></p>
+                    
+                        <%if(feed2.length>0){%>
+                           <%feed2.forEach(f=>{%>
+                                <%if((f.forConf.id+"")==(c.id+"") && (user.id+"")==(f.attender+"")){%>
+                                    <h4 style="margin-top: 7px;">You Have Attended And Submitted The Form</h4>
+                                    <%flag=true%>
+                                <%}%>
+                           <%}) %>
+                           <%}%>
+                        <%if(!flag){%>
+                            <%if(c.attendees.indexOf(user.id)===-1){%>
+                                <a id="gbutton" href="/register/<%=c.id%>">Register</a>
+                            <%}else{%>
+                                <a id="rbutton" href="/register/<%=c.id%>">Unregister</a>
+                                <p id="text"><b>Attended?</b> Give us your <strong>valuable feedback</strong> <a href="/feedback/<%=c.id%>">here</a></p>
+                            <%}%>
+                        <%}%>
+                    </div>
+                    <br>
+                <%})%>
+            <%}else{%>
+                <h3>No Conferences Yet</h3>
+            <%}%>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

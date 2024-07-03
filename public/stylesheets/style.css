@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+#main, #main2 {
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main2 {
+    background-color: #e0f7fa;
+}
+
+#content, #content2, #content4, #content6 {
+    width: 27%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#content2 {
+    border: 1px solid #4caf50;
+}
+
+#content:hover {
+    background-color: #fff;
+}
+
+#content form, #content2 form {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+}
+
+#content form input, #content2 form input {
+    width: 80%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+input[type="submit"] {
+    height: 40px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#a {
+    color: #2196f3;
+}
+
+#green {
+    color: #8bc34a;
+}
+
+#greenbg {
+    background-color: #8bc34a;
+}
+
+#main3, #main4 {
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+}
+
+#nav {
+    background-color: #2196f3;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+#main4 #nav {
+    background-color: #3f51b5;
+}
+
+#nav h2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+}
+
+#hero {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    gap: 20px;
+}
+
+#concreate {
+    width: 40%;
+    background-color: #c8e6c9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid #4caf50;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#concreate form {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+}
+
+#concreate form input {
+    height: 35px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 7px;
+}
+
+#dets, #dets2 {
+    width: 60%;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+#dets2 {
+    width: 100%;
+    padding: 30px;
+}
+
+#number, #people, #feedbacks, #number2 {
+    width: 150px;
+    height: 150px;
+    border-radius: 25px;
+    padding: 20px;
+    background-color: rgba(63, 81, 181, 0.8);
+}
+
+#number2 {
+    background-color: rgba(255, 152, 0, 0.8);
+}
+
+#people {
+    background-color: rgba(139, 195, 74, 0.8);
+}
+
+#feedbacks {
+    background-color: rgba(233, 30, 99, 0.8);
+}
+
+#lower {
+    padding: 20px;
+}
+
+#contents {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#box, #box2 {
+    background-color: #ffeb3b;
+    padding: 15px;
+    width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#box2 {
+    background-color: #f48fb1;
+    min-height: 180px;
+}
+
+#viewfeed, #delc {
+    text-decoration: none;
+    padding: 6px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#viewfeed {
+    background-color: #00bcd4;
+    color: #fff;
+}
+
+#delc {
+    background-color: #e91e63;
+    color: #fff;
+}
+
+#links {
+    display: flex;
+    gap: 15px;
+}
+
+#gbutton, #rbutton {
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    padding: 8px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#gbutton {
+    background-color: #4caf50;
+}
+
+#rbutton {
+    background-color: #f44336;
+}
+
+#text {
+    margin-top: 10px;
+}
+
+#hero2, #hero3 {
+    padding: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content4, #content6 {
+    width: 60%;
+    background-color: #b3e5fc;
+}
+
+#content6 {
+    background-color: #ff1744;
+    color: #fff;
+}
+
+#content4 form {
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}

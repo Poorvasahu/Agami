@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <div id="main">
+        <div id="content">
+            <h1>User Login</h1>
+        <form action="/userlogin" method="post">
+            <input type="text" maxlength="64" name="username" placeholder="Username">
+            <input type="password" maxlength="64" name="password" placeholder="Password">
+            <input type="submit" value="Login">
+        </form>
+        <p>New user? <a id="a" href="/">Sign Up Here</a></p>
+        <br>
+        <p><a id="a" href="/adminlogin">Login here</a> if <strong id="green">Admin</strong></p>
+        </div>
+    </div>
+</body>
+</html>

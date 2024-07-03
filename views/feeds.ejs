@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedbacks</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <div id="main3">
+        <div id="nav">
+            <div id="wel">
+                <h1>Welcome <%= adm.name %></h1>
+            </div>
+            <h2>Admin Panel</h2>
+            <div id="links">
+                <a id="delc" href="/">Logout</a>
+            </div>
+        </div>
+        <br>
+        <h1>Feedbacks</h1>
+        <div id="contents" style="padding: 15px;">
+            <% if(feeds.length > 0) { %>
+                <% feeds.forEach(feed => { %>
+                    <div id="box">
+                        <p><strong><%= feed.attender.username %></strong></p>
+                        <p><%= feed.content %></p>
+                    </div>
+                <% }); %>
+            <% } else { %>
+                <h3>No feedbacks yet</h3>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>
